@@ -80,6 +80,7 @@ class Login {
 						error.getElement().innerHTML = "Failed to connect"
 					}
 					xmlHttp.open("POST", miniauthLogin, true);
+					xmlHttp.setRequestHeader("Content-Type","application/json");
 					xmlHttp.send(JSON.stringify({ "username": username.getElement().value, "password": password.getElement().value, "appname": appName }));
 				}
 			}
@@ -149,6 +150,7 @@ class Login {
 								error.getElement().innerHTML = "Failed to connect"
 							}
 							xmlHttp.open("POST", miniauthLogin, true);
+							xmlHttp.setRequestHeader("Content-Type","application/json");
 							xmlHttp.send(JSON.stringify({ "username": username.getElement().value, "password": password.getElement().value, "appname": appName }));
 						}
 					}
@@ -157,6 +159,7 @@ class Login {
 						error.getElement().innerHTML = "Failed to connect"
 					}
 					xmlHttp.open("POST", miniauthCreate, true);
+					xmlHttp.setRequestHeader("Content-Type","application/json");
 					xmlHttp.send(JSON.stringify({ "username": username.getElement().value, "password": password.getElement().value }));
 				}
 			}
